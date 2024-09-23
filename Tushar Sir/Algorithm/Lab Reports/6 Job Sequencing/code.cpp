@@ -48,4 +48,8 @@ int main()
     for (auto i : ans)
         cout << i << " ";
     cout << endl;
+    cout<<"Job sequence is: ";
+    for(int i=1; i<=n; ++i)
+        cout<<j[i]<<" ";
+    cout<<endl;
 }
