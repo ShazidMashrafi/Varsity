@@ -23,12 +23,12 @@ void Prims(int n, int k, int l)
     for (int i = 2; i < n; i++)
     {
         int j = 0;
-        int nearcost = INF;
+        int near_cost = INF;
         for (int v = 1; v <= n; ++v)
         {
-            if (near[v] != 0 && cost[v][near[v]] < nearcost)
+            if (near[v] != 0 && cost[v][near[v]] < near_cost)
             {
-                nearcost = cost[v][near[v]];
+                near_cost = cost[v][near[v]];
                 j = v;
             }
         }
