@@ -24,20 +24,6 @@ void shrotPath(int n, vector<vector<int>> cost, int v)
     }
     S[v] = true;
     dist[v] = 0;
-    
-//     I   50   45   10    I    I
-//     I    I   10   15    I    I
-//     I    I    I    I   30    I
-//    20    I    I    I   15    I
-//     I   20   35    I    I    I
-//     I    I    I    I    3    I
-
-// 0 50 45 10 I I 
-// 4
-// 5
-// 3
-// 2
-// 0
 
     for (int i = 1; i <= n; i++)
     {
