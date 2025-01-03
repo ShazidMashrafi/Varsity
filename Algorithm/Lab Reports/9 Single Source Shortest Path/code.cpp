@@ -7,6 +7,7 @@ int cost[N][N];
 int dist[N];
 bool S[N];
 
+
 int minIndex(int n)
 {
     int min = INT_MAX, min_index = -1;
