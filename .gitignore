@@ -1,2 +1,7 @@
-test.cpp
-*.exe
+*
+!*/
+!Algorithm/
+!C/
+!C++/
+!DS/
+!Python/
