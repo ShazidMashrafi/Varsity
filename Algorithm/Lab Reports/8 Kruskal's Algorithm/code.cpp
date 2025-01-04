@@ -29,6 +29,7 @@ void kruskal(int n)
 
     int count = 0, mincost=0;
 
+    cout <<"Edges taken: " <<endl;
     while (count < n - 1)
     {
         int min = INT_MAX, a = -1, b = -1;
@@ -45,11 +46,11 @@ void kruskal(int n)
             }
         }
         unionset(a, b);
-        cout << a << "-------" << b << endl;
+        cout << "Vertices: " << a << " " << b << ", Cost: " << cost[a][b] <<endl;
         mincost += min;
         count++;
     }
-    cout << mincost << endl;
+    cout << "Minimum cost is " << mincost << endl;
 }
 
 int main()
