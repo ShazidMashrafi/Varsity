@@ -1,0 +1,1 @@
+This folder contains solutions of contests hosted by me/us in BootCamps in my varsity.
