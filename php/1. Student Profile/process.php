@@ -6,7 +6,19 @@ $errors = [];
 
 if (empty($_POST['name'])) {
     $errors['name'] = "Name is required";
-}
+}$sql = "CREATE TABLE IF NOT EXISTS employees (
+    id VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    fathersName VARCHAR(100) NOT NULL,
+    mothersName VARCHAR(100) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    department VARCHAR(50) NOT NULL,
+    number VARCHAR(20) NOT NULL,
+    NIDnumber VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    join_date DATE NOT NULL,
+    address TEXT NOT NULL
+)";
 if (empty($_POST['fathers_name'])) {
     $errors['fathers_name'] = "Father's name is required";
 }
