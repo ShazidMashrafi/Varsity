@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Messages</title>
+    <script>
+        function showMessage() {
+            alert("I am a CSE student");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Hover over, click, or press a key in the input below:</h2>
+
+    <br><br>
+    <button onclick="showMessage()">
+        Click here
+    </button>
+
+    <br><br>
+    <input type="text" onkeypress="showMessage()" placeholder="Press any key here">
+
+    <br><br>
+    <div class="hover-box" onmouseover="showMessage()" style="border: 2px solid #333; width:200px;">
+        Hover over this box
+    </div>
+
+</body>
+
+</html>
