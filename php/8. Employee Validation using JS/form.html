@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Enter Employee Details</h3>
+    <form action="process.php" method="post" id="employeeForm" onsubmit="return validateForm()">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+      <span id="idError" class="error"></span>
+      <br><br>
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <span id="nameError" class="error"></span>
+      <br><br>
+      
+      <label for="fathersName">Father's Name:</label>
+      <input type="text" id="fathersName" name="fathersName" required>
+      <span id="fathersNameError" class="error"></span>
+      <br><br>
+      
+      <label for="mothersName">Mother's Name:</label>
+      <input type="text" id="mothersName" name="mothersName" required>
+      <span id="mothersNameError" class="error"></span>
+      <br><br>
+      
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <span id="genderError" class="error"></span>
+      <br><br>
+      
+      <label for="department">Select Department:</label>
+      <select id="department" name="department" required>
+        <option value="">Select a department</option>
+        <option value="marketing">Marketing</option>
+        <option value="sales">Sales</option>
+        <option value="operator">Operator</option>
+        <option value="inventory">Inventory</option>
+      </select>
+      <span id="departmentError" class="error"></span>
+      <br><br>
+      
+      <label for="number">Phone Number:</label>
+      <input type="text" id="number" name="number" required>
+      <span id="numberError" class="error"></span>
+      <br><br>
+      
+      <label for="NIDnumber">NID number:</label>
+      <input type="text" id="NIDnumber" name="NIDnumber" required>
+      <span id="NIDnumberError" class="error"></span>
+      <br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span id="emailError" class="error"></span>
+      <br><br>
+      
+      <label for="join">Join Date:</label>
+      <input type="date" id="join" name="join" required>
+      <span id="joinError" class="error"></span>
+      <br><br>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+      <span id="addressError" class="error"></span>
+      <br><br>
+      
+      <input type="submit" value="Submit">
+      <a href="index.php"><button type="button">Cancel</button></a>
+    </form>
+
+    <script src="validate.js"></script>
+</body>
+</html>

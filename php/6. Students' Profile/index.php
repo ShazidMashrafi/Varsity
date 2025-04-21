@@ -47,6 +47,8 @@ $result = mysqli_query($conn, $sql);
             echo "<td>" . $row['reg'] . "</td>";
             echo "<td>" . $row['session'] . "</td>";
             echo "<td>" . $row['department_name'] . "</td>";
+            echo "<td>" . $row['faculty_name'] . "</td>";
+            echo "<td>" . $row['university_name'] . "</td>";
         }
         echo "</table>";
     } else {
