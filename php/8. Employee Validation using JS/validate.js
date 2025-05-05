@@ -79,5 +79,9 @@ function validateForm() {
         isValid = false;
     }
 
+    if (isValid) {
+        alert("Data saved");
+    }
+
     return isValid;
 }

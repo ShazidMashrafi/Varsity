@@ -92,7 +92,9 @@ int main()
     float average_waiting_time = total_waiting_time / n;
     float average_turnaround_time = total_turnaround_time / n;
     
+    cout << "\nTotal Waiting Time: " << total_waiting_time;
     cout << "\nAverage Waiting Time: " << average_waiting_time;
+    cout << "\nTotal Turn Around Time: " << total_turnaround_time;
     cout << "\nAverage Turnaround Time: " << average_turnaround_time << endl;
     cout << "\nTime Quantum: " << time_quantum << endl;
 
