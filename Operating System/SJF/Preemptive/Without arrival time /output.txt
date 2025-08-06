@@ -1,0 +1,14 @@
+
+Gantt Chart:
+|	p3	|	p5	|	p2	|	p1	|	p4	|
+0		1		4		8		16		25		
+Name	AT	BT	CT	TAT	WT
+p1	0	8	16	16	8
+p2	0	4	8	8	4
+p3	0	1	1	1	0
+p4	0	9	25	25	16
+p5	0	3	4	4	1
+Total turn around time: 54
+Average turn around time: 10.8
+Total waiting time: 29
+Average waiting time: 5.8
