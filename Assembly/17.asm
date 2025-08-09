@@ -1,0 +1,14 @@
+.MODEL SMALL
+.STACK 100h
+.CODE
+MAIN PROC
+
+    MOV AH, 2
+    mov dl, '?'
+    INT 21h
+
+    MOV AH, 4CH
+    INT 21h
+    
+MAIN ENDP
+END MAIN
