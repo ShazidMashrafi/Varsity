@@ -1,14 +1,15 @@
-.MODEL SMALL
-.STACK 100h
-.CODE
-MAIN PROC
+.model small
+.stack 100h
 
-    MOV AH, 2
+.code
+main proc
+
+    mov ah, 2
     mov dl, '?'
-    INT 21h
+    int 21h
 
-    MOV AH, 4CH
-    INT 21h
-    
-MAIN ENDP
-END MAIN
+    mov ah, 4ch
+    int 21h
+
+main endp
+end main

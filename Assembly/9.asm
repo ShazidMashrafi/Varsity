@@ -1,12 +1,14 @@
 .model small
 .stack 100h
+
 .data
-    msg1 db 'Enter first 3-digit number: $'
-    msg2 db 13,10,'Enter second 3-digit number: $'
+    msg1    db 'Enter first 3-digit number: $'
+    msg2    db 13,10,'Enter second 3-digit number: $'
     msg_mul db 13,10,'Product: $'
     msg_div db 13,10,'Quotient: $'
-    num1 dw ?
-    num2 dw ?
+    num1    dw ?
+    num2    dw ?
+
 .code
 main proc
     mov ax, @data
@@ -36,7 +38,7 @@ main proc
     lea dx, msg_div
     mov ah, 9
     int 21h
-    
+
     mov ax, num1
     mov dx, 0
     mov bx, num2
@@ -48,16 +50,16 @@ main proc
 main endp
 
 readnum proc
-    xor ax, ax        
+    xor ax, ax
     mov cx, 3
 
 read_digit:
-    mov ah, 1         
+    mov ah, 1
     int 21h
 
-    cmp al, 13        
+    cmp al, 13
     je done_input
-    sub al, '0'       
+    sub al, '0'
     cmp al, 9
     jae done_input
 

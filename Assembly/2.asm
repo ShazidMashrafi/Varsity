@@ -1,11 +1,13 @@
 .model small
 .stack 100h
+
 .data
     msg1 db 'Enter first 3-digit number: $'
     msg2 db 13,10,'Enter second 3-digit number: $'
     msg3 db 13,10,'Sum: $'
     num1 dw ?
     num2 dw ?
+
 .code
 main proc
     mov ax, @data
@@ -17,13 +19,11 @@ main proc
     call readnum
     mov num1, ax
 
-
     lea dx, msg2
     mov ah, 9
     int 21h
     call readnum
     mov num2, ax
-
 
     lea dx, msg3
     mov ah, 9
@@ -41,7 +41,7 @@ readnum proc
     xor ax, ax        
     mov cx, 3
 
-    read_digit:
+read_digit:
     mov ah, 1         
     int 21h
 
@@ -57,10 +57,9 @@ readnum proc
 
     loop read_digit
 
-    done_input:
+done_input:
     ret
 readnum endp
-
 
 printnum proc
     push ax
@@ -71,7 +70,7 @@ printnum proc
     xor cx, cx
     mov bx, 10
 
-    print_loop:
+print_loop:
     xor dx, dx
     div bx
     push dx
@@ -80,7 +79,7 @@ printnum proc
     test ax, ax
     jnz print_loop
 
-    print_digits:
+print_digits:
     pop dx
     add dl, '0'
     mov ah, 2

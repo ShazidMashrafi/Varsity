@@ -1,13 +1,13 @@
-.MODEL SMALL
-.STACK 100h
+.model small
+.stack 100h
 
-.DATA
+.data
     msg db 'IBM Characters:',13,10,'$'
 
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
+.code
+main proc
+    mov ax, @data
+    mov ds, ax
 
     lea dx, msg
     mov ah, 9
@@ -16,7 +16,7 @@ MAIN PROC
     mov cx, 32         
     mov bl, 0 
 
-    display_loop:
+display_loop:
     mov ah, 2
     mov dl, bl
     int 21h            
@@ -27,5 +27,5 @@ MAIN PROC
     mov ah, 4ch
     int 21h
     
-MAIN ENDP
-END MAIN
+main endp
+end main

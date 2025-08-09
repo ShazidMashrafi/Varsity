@@ -15,7 +15,7 @@ main proc
     mov ax, 0        
     mov bx, 1         
 
-    print_fib:
+print_fib:
     push ax
     call printnum
     mov dl, ' '
@@ -42,7 +42,7 @@ printnum proc
     xor cx, cx
     mov bx, 10
 
-    print_loop:
+print_loop:
     xor dx, dx
     div bx
     push dx
@@ -51,7 +51,7 @@ printnum proc
     test ax, ax
     jnz print_loop
 
-    print_digits:
+print_digits:
     pop dx
     add dl, '0'
     mov ah, 2

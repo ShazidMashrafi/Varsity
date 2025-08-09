@@ -1,13 +1,13 @@
-.MODEL SMALL
-.STACK 100h
+.model small
+.stack 100h
 
-.DATA
+.data
     msg db 'Sum is: $'
 
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
+.code
+main proc
+    mov ax, @data
+    mov ds, ax
 
     mov ax, 0
 
@@ -33,7 +33,6 @@ MAIN PROC
     int 21h
 main endp
 
-
 printnum proc
     push ax
     push bx
@@ -43,7 +42,7 @@ printnum proc
     xor cx, cx
     mov bx, 10
 
-    print_loop:
+print_loop:
     xor dx, dx
     div bx
     push dx
@@ -52,7 +51,7 @@ printnum proc
     test ax, ax
     jnz print_loop
 
-    print_digits:
+print_digits:
     pop dx
     add dl, '0'
     mov ah, 2
@@ -66,4 +65,4 @@ printnum proc
     ret
 
 printnum endp
-END MAIN
+end main

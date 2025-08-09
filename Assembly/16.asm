@@ -1,16 +1,17 @@
-.MODEL SMALL
-.STACK 100h
-.CODE
-MAIN PROC
-    MOV CX, 80
+.model small
+.stack 100h
 
-PRINT_LOOP:
-    MOV DL, '*'         
-    MOV AH, 2            
-    INT 21h
-    LOOP PRINT_LOOP      
-    
-    MOV AH, 4CH
-    INT 21h
-MAIN ENDP
-END
+.code
+main proc
+    mov cx, 80
+
+print_loop:
+    mov dl, '*'
+    mov ah, 2
+    int 21h
+    loop print_loop
+
+    mov ah, 4ch
+    int 21h
+main endp
+end main

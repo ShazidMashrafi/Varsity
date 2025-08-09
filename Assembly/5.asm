@@ -12,7 +12,7 @@ main proc
     mov ah, 9
     int 21h
 
-    read_loop:
+read_loop:
     mov ah, 1        
     int 21h
     cmp al, 13        
@@ -20,12 +20,12 @@ main proc
     push ax          
     jmp read_loop
 
-    print_reverse:
+print_reverse:
     lea dx, msg2
     mov ah, 9
     int 21h
 
-    print_loop:
+print_loop:
     cmp sp, 100h
     je done
     pop ax
@@ -34,7 +34,7 @@ main proc
     int 21h
     jmp print_loop
 
-    done:
+done:
     mov ah, 4ch
     int 21h
 

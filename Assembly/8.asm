@@ -1,14 +1,14 @@
-.MODEL SMALL
-.STACK 100h
+.model small
+.stack 100h
 
-.DATA
+.data
     even_msg db 'Number is EVEN.$'
     odd_msg  db 'Number is ODD.$'
 
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
+.code
+main proc
+    mov ax, @data
+    mov ds, ax
 
     mov ah, 1
     int 21h
@@ -17,20 +17,20 @@ MAIN PROC
     test al, 1
     jz print_even
 
-    print_odd:
+print_odd:
     lea dx, odd_msg
     mov ah, 9
     int 21h
     jmp done
 
-    print_even:
+print_even:
     lea dx, even_msg
     mov ah, 9
     int 21h
 
-    done:
+done:
     mov ah, 4ch
     int 21h
-    
-MAIN ENDP
-END MAIN
+
+main endp
+end main

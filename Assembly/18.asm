@@ -18,7 +18,7 @@ main:
     cmp bl, bh
     jbe print_bl_bh
 
-    print_bh_bl:
+print_bh_bl:
     lea dx, msg
     mov ah, 09h
     int 21h
@@ -35,7 +35,7 @@ main:
 
     jmp done
 
-    print_bl_bh:
+print_bl_bh:
     lea dx, msg
     mov ah, 09h
     int 21h
@@ -50,7 +50,7 @@ main:
     mov dl, bh
     int 21h
 
-    done:
+done:
     mov ah, 4Ch
     int 21h
 

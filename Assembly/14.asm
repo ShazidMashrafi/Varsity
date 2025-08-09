@@ -21,22 +21,20 @@ main proc
     jge print_bl
     jmp print_bh
 
-    print_bh:
+print_bh:
     mov ah, 2
     mov dl, bh
     int 21h
     jmp done
 
-    print_bl:   
+print_bl:   
     mov ah, 2
     mov dl, bl
     int 21h
 
-    done:
+done:
     mov ax, 4ch
     int 21h
     
-main ENDP
+main endp
 end main
-   
-    

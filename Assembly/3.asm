@@ -1,8 +1,9 @@
-.model
+.model small
 .stack 100h
+
 .code
 main proc
-    mov ah,1 
+    mov ah, 1
     int 21h
     mov bl, al
 
@@ -17,9 +18,9 @@ main proc
     mov dl, bl
     int 21h
 
-    exit:
+exit:
     mov ax, 4ch
     int 21h
-    
+
 main endp
 end main

@@ -19,7 +19,7 @@ main:
 
     jmp done
 
-    display:  
+display:  
     lea dx, msg
     mov ah, 9
     int 21h
@@ -30,7 +30,7 @@ main:
 
     jmp done
 
-    done:
+done:
     mov ah, 4Ch
     int 21h
 
