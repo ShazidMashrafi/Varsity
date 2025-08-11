@@ -29,8 +29,7 @@ $result = mysqli_query($conn, $sql);
             <th>Price</th>
             <th>Quantity</th>
             <th>Manufacturer</th>
-            <th>Warranty</th>
-            <th>Power</th>
+            <!-- Removed Warranty and Power columns -->
         </tr>
         <?php
         while($row = mysqli_fetch_assoc($result)) {
@@ -41,8 +40,7 @@ $result = mysqli_query($conn, $sql);
             echo "<td>BDT: " . $row['price'] . "</td>";
             echo "<td>" . $row['quantity'] . "</td>";
             echo "<td>" . $row['manufacturer'] . "</td>";
-            echo "<td>" . $row['warranty'] . "</td>";
-            echo "<td>" . $row['power'] . "</td>";
+            // Removed Warranty and Power columns
             echo "</tr>";
         }
         ?>

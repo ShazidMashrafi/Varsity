@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,7 +26,7 @@ $sql = "CREATE TABLE IF NOT EXISTS electronics_products (
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
     quantity INT NOT NULL,
-    manufacturer VARCHAR(100) NOT NULL,
+    manufacturer VARCHAR(100) NOT NULL
 )";
 
 if (!mysqli_query($conn, $sql)) {

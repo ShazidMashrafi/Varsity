@@ -4,8 +4,7 @@ include 'config.php';
 
 $edit = false;
 $student = [
-    'id' => '', 'name' => '', 'fathers_name' => '', 'mothers_name' => '', 'gender' => '', 'address' => '', 'dob' => '',
-    'roll' => '', 'reg' => '', 'session' => '', 'department_name' => '', 'faculty_name' => '', 'university_name' => ''
+    'id' => '', 'name' => '', 'gender' => '', 'roll' => '', 'department_name' => ''
 ];
 
 if (isset($_GET['id'])) {

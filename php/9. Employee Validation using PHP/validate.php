@@ -73,7 +73,7 @@ if (empty($_POST['address'])) {
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
     $_SESSION['form_data'] = $_POST;
-    header("Location: form.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -90,7 +90,7 @@ if (mysqli_query($conn, $sql)) {
 } else {
     $_SESSION['errors']['database'] = "Error: " . mysqli_error($conn);
     $_SESSION['form_data'] = $_POST;
-    header("Location: form.php");
+    header("Location: index.php");
 }
 
 mysqli_close($conn);
