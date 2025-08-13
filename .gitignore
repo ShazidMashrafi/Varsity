@@ -1,5 +1,48 @@
+# C/C++/Assembly
 *.out
 *.o
+*.obj
 *.exe
-a.out
 *.bin
+*.elf
+*.gch
+*.dll
+*.so
+*.a
+*.lib
+*.d
+*.lst
+*.map
+*.suo
+*.idb
+*.pdb
+*.mod
+*.cmd
+*.dep
+*.exp
+*.bss
+*.hex
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+
+# PHP
+*.log
+vendor/
+
+# General
+*.swp
+*.swo
+*.tmp
+*.bak
+.DS_Store
+
+# VS Code
+.vscode/
